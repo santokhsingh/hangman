@@ -1,2 +1,2 @@
 # Hangman
-Hangman System Design
+Hangman System Design Test
