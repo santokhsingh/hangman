@@ -56,12 +56,12 @@ Start service from command line using Gradle or from with-in the IDE
 
 ## Persistence 
 
- - If the load on the DB is relatively small i.e. millions of records I would prefer PostgresSql since it can store object in JSON format and allows query on JSON data with ease. We can limit the number concurrent games
- - Other option is to use NoSql DB, if we have billions of records (data in terra or peta bytes)  to persist game/game state, using stateId as partition key 
+ -  Obvious choice is NoSql DB, since we don't need JOINS and transaction ACID kind of properties to persist game/game state, using stateId as partition key 
 	 - Three replicas/replication factor for failover
 	 - Schema: 
 		 - stateid: UUID (partition key)
 		 - content: Varchar
-	 - Enforce time to live for automatic cleanup of stale data (30 days)
+		 - expire_time
+	 - Enforce time to live for automatic cleanup of stale data (30 days) based on expire_time
 
 
