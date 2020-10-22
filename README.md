@@ -52,7 +52,7 @@ Start service from command line using Gradle or from with-in the IDE
 
  - Assuming the service is to be run in a clustered environment behind load balancer
  - Perhaps adding API Gateway layer for routing, throttling (by ip), monitoring, analytics and security
- - Distributable caching layer (write through cache) with LRU eviction policy to maintain hot games in cache
+ - Distributable caching layer (write around cache) with LRU eviction policy to maintain hot games in cache
 
 ## Persistence 
 
